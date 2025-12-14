@@ -145,22 +145,26 @@ During training, we ran the model for up to 100 epochs using mini-batches of 32 
 Using mini-batches instead of one example at a time makes training faster and gives more reliable gradients.
 
 
-Monitoring and Early Stopping
+Monitoring and Early Stopping:
 
 
-This was a critical addition. We tracked the training and test loss at each epoch to make sure the model was learning properly. The loss curves were smooth and consistently decreased, which showed that the learning rate and batch size were reasonable. We also used early stopping so the model would stop training once it stopped improving, which helps prevent overfitting. In practice, our model stopped training at 42 epochs.
+Early stopping was a critical addition. We tracked the training and test loss at each epoch to make sure the model was learning properly. The loss curves were smooth and consistently decreased, which showed that the learning rate and batch size were reasonable. We also used early stopping so the model would stop training once it stopped improving, which helps prevent overfitting. In practice, our model stopped training at 42 epochs.
 Overall, our training setup follows the typical and recommended approach for building a basic neural network. It uses well-established defaults—Adam, CrossEntropyLoss, mini-batches, and early stopping—which together give stable and reliable training performance.
 
 Chosen Evaluation Metrics
 
 Model performance is assessed using multiple complementary metrics to provide a comprehensive view of predictive capability:
+
 Accuracy: The proportion of correct predictions, serving as the primary performance metric given the balanced class distribution.
+
 Precision: The proportion of predicted positive cases that are actually correct. Precision provides insight into how reliably the model identifies disease cases without generating excessive false alarms.
 
 Macro Precision: The average precision across both classes, giving equal weight to “No Disease” and “Disease.” This metric ensures that performance is not biased toward one class, making it especially important in medical contexts where errors in either direction carry clinical consequences.
 
 Confusion Matrix: A 2×2 matrix showing true positives, true negatives, false positives, and false negatives, providing insight into the types of errors the model makes.
+
 Classification Report: Precision, recall, and F1-score for each class, offering detailed performance breakdown beyond simple accuracy.
+
 ROC Curve and AUC: The Receiver Operating Characteristic curve plots true positive rate against false positive rate across all classification thresholds. The Area Under the Curve (AUC) summarizes this into a single metric, with 1.0 representing perfect classification and 0.5 representing random guessing.
 Feature Importance: Analysis of first-layer weights provides approximate feature importance scores, identifying which clinical measurements contribute most strongly to predictions.
 
@@ -179,11 +183,12 @@ The final results for our model’s performance were:
 
 One of the main insights from our project was identifying which features were most useful for predicting a patient’s diagnosis. The top five were chest pain, ST depression, number of major vessels, maximum heart rate achieved, and blood oxygen capacity. These are well-known indicators in medical research, but seeing them emerge from our own model helped us better understand which factors matter most for assessing heart health.
 
-Next Steps
+Next Steps:
 
 
-Future work could focus on making the model more reliable and useful in real clinical settings. One clear improvement would be to train and test the model on larger and more diverse datasets, either by combining data from multiple sources or using larger public cardiac datasets, which would help ensure the results generalize beyond a single sample. 
+Future work could focus on making the model more foolproof and useful for real clinical settings. One clear improvement would be to train and test the model on larger and more diverse datasets, either by combining data from multiple sources or using larger public cardiac datasets, which would help ensure the results generalize beyond a single sample. 
 Using cross-validation and more structured hyperparameter tuning could also lead to more dependable performance estimates and incremental gains in accuracy. In addition, exploring slightly more advanced model designs or simple ensemble approaches may help capture patterns the current architecture misses. 
 From a practical standpoint, adding clearer interpretability and some measure of prediction uncertainty would make the model’s outputs easier to trust and evaluate, especially in borderline cases. Extending the task from binary classification to predicting disease severity and testing the model on fully independent datasets would further increase its clinical relevance. 
-Overall, this project shows that deep learning can perform well on cardiac classification problems and provides a strong starting point for future improvements aimed at real-world use. The combination of strong predictive performance, interpretable feature importance, and rigorous evaluation methodology establishes a solid baseline for future enhancements aimed at clinical deployment.
+Overall, this project shows that deep learning can perform well on cardiac classification problems and provides a substantial starting point for future improvements aimed at real-world use. The combination of strong predictive performance, interpretable feature importance, and rigorous evaluation methodology establishes a solid baseline for future enhancements aimed at clinical deployment.
+
 
