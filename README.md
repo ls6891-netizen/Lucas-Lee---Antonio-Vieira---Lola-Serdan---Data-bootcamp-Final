@@ -187,8 +187,14 @@ Next Steps:
 
 
 Future work could focus on making the model more foolproof and useful for real clinical settings. One clear improvement would be to train and test the model on larger and more diverse datasets, either by combining data from multiple sources or using larger public cardiac datasets, which would help ensure the results generalize beyond a single sample. 
+
+
 Using cross-validation and more structured hyperparameter tuning could also lead to more dependable performance estimates and incremental gains in accuracy. In addition, exploring slightly more advanced model designs or simple ensemble approaches may help capture patterns the current architecture misses. 
+
+
 From a practical standpoint, adding clearer interpretability and some measure of prediction uncertainty would make the model’s outputs easier to trust and evaluate, especially in borderline cases. Extending the task from binary classification to predicting disease severity and testing the model on fully independent datasets would further increase its clinical relevance. 
+
+
 Overall, this project shows that deep learning can perform well on cardiac classification problems and provides a substantial starting point for future improvements aimed at real-world use. The combination of strong predictive performance, interpretable feature importance, and rigorous evaluation methodology establishes a solid baseline for future enhancements aimed at clinical deployment.
 
 
