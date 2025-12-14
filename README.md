@@ -1,5 +1,6 @@
 # DATABOOTCAMPFINAL
 Lucas Lee, Antonio Vieira and Lola Serdan final project
+
 Introduction
 Our group chose to study heart disease because, out of all of the preventable global health causes, cardiovascular disease stood out as something personal to us, with a scientifically urgent rationale. According to the World Health Organisation (WHO), cardiovascular disease is responsible for 17.9 million deaths annually. This daunting number cements heart disease as one of the most common and horrific causes in history. Early detection and prediction of heart disease is crucial for preventative measures, lowering annual death rates. Our project aspires to serve as both a prediction model and a learning approach to understand and forecast the presence of heart disease, using clinical patient data from the UCI Machine Learning Repository.
 
